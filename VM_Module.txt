@@ -1,0 +1,19 @@
+
+
+module "Windows" {
+  source  = "ranaarpit84/Windows/Azure"
+  version = "0.1.0"
+
+
+  # Resource Group, location, VNet , subnet and VM details
+  resource_group_name  = var.rsg-name
+  location             = var.location
+  virtual_network_name = var.vnet-name
+  subnet_name          = var.subnet-name
+  virtual_machine_name = var.vm-name
+  caching=var.caching
+  storage_account_type=var.storage-account-type
+  publisher=var.publisher
+  offer=var.offer
+  sku=var.sku
+}
